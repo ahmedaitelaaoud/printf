@@ -1,4 +1,4 @@
-# printf#### Goal
+#### Goal
 replicate the printf function.
 ```
 #include <stdio.h>
