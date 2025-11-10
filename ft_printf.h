@@ -17,5 +17,7 @@
 # include <stddef.h>
 
 int	ft_printf(const char *format, ...);
+void	ft_putchar(char c, size_t *count);
+void	ft_putstr(char *s, size_t *count);
 
 #endif
