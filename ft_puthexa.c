@@ -1,26 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_puthexa.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aait-ela <aait-ela@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/10 11:12:17 by aait-ela          #+#    #+#             */
-/*   Updated: 2025/11/10 11:14:50 by aait-ela         ###   ########.fr       */
+/*   Created: 2025/11/11 12:32:59 by aait-ela          #+#    #+#             */
+/*   Updated: 2025/11/11 12:40:46 by aait-ela         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "ft_printf.h"
 
-# include <stdarg.h>
-# include <stddef.h>
+void	ft_puthexa(unsigned int n, size_t *count, char format)
+{
+	char	*base;
 
-int	ft_printf(const char *format, ...);
-void	ft_putchar(char c, size_t *count);
-void	ft_putstr(char *s, size_t *count);
-void	ft_putnbr(int n, size_t *count);
-void	ft_putunbr(unsigned int n, size_t *count);
-void	ft_puthexa(unsigned int n, size_t *count, char format);
-
-#endif
+	if (format == 'x')
+		base = "0123456789abcdef";
+	else
+		base = "0123456789ABCDEF";
+	if (nb > 9)
+		ft_puthexa(n / 16, count, format);
+	ft_putchar((base[nb % 16] + '0', count));
+}
