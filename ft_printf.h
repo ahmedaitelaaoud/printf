@@ -14,13 +14,14 @@
 # define FT_PRINTF_H
 
 # include <stdarg.h>
-# include <stddef.h>
+# include <unistd.h>
 
-int	ft_printf(const char *format, ...);
+int		ft_printf(const char *format, ...);
 void	ft_putchar(char c, size_t *count);
 void	ft_putstr(char *s, size_t *count);
 void	ft_putnbr(int n, size_t *count);
 void	ft_putunbr(unsigned int n, size_t *count);
 void	ft_puthexa(unsigned int n, size_t *count, char format);
+void	ft_putaddr(void *ptr, size_t *count);
 
 #endif
