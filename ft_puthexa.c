@@ -20,7 +20,7 @@ void	ft_puthexa(unsigned int n, size_t *count, char format)
 		base = "0123456789abcdef";
 	else
 		base = "0123456789ABCDEF";
-	if (n > 9)
+	if (n > 15)
 		ft_puthexa(n / 16, count, format);
-	ft_putchar((base[n % 16]) + '0', count);
+	ft_putchar((base[n % 16]), count);
 }
