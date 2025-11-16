@@ -39,13 +39,16 @@ int	ft_printf(const char *format, ...)
 	va_start(args, format);
 	count = 0;
 	i = 0;
+	if (!format)
+		return (-1);
 	while (format[i])
 	{
 		if (format[i] == '%')
 		{
 			i++;
-			if (format[i])
-				handle_conversion(format[i], args, &count);
+			if (format[i] == '\0')
+				return (-1);
+			handle_conversion(format[i], args, &count);
 		}
 		else
 			ft_putchar(format[i], &count);

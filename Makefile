@@ -18,9 +18,9 @@ RM = rm -f
 SRC = ft_putchar.c ft_puthexa.c ft_putnbr.c ft_putstr.c ft_putunbr.c ft_putaddr.c ft_printf.c
 OBJ = $(SRC:.c=.o)
 
-all: $(NAME)
+all: $(NAME) ft_printf.h
 
-$(NAME): $(OBJ)
+$(NAME): $(OBJ) 
 	$(AR) $(NAME) $(OBJ)
 
 clean:
