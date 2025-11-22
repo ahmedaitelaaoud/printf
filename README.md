@@ -424,9 +424,8 @@ The implementation uses `write()` system call for direct output, avoiding buffer
 
 Created as part of the 42 School curriculum.
 
-**Repository:** [Your GitHub Link]
+**Repository:** https://github.com/ahmedaitelaaoud/printf
 
-**License:** MIT
 
 ---
 
